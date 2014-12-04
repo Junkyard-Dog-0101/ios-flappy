@@ -15,6 +15,7 @@
 		CE5606161A305CDB003B2190 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5606151A305CDB003B2190 /* Images.xcassets */; };
 		CE5606191A305CDB003B2190 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5606171A305CDB003B2190 /* LaunchScreen.xib */; };
 		CE5606251A305CDB003B2190 /* FlappyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5606241A305CDB003B2190 /* FlappyTests.swift */; };
+		CE56062F1A305D9E003B2190 /* bird.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CE56062E1A305D9E003B2190 /* bird.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		CE56061E1A305CDB003B2190 /* FlappyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5606231A305CDB003B2190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE5606241A305CDB003B2190 /* FlappyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyTests.swift; sourceTree = "<group>"; };
+		CE56062E1A305D9E003B2190 /* bird.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bird.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		CE5606071A305CDB003B2190 /* Flappy */ = {
 			isa = PBXGroup;
 			children = (
+				CE56062E1A305D9E003B2190 /* bird.atlas */,
 				CE56060A1A305CDB003B2190 /* AppDelegate.swift */,
 				CE56060C1A305CDB003B2190 /* GameScene.sks */,
 				CE56060E1A305CDB003B2190 /* GameScene.swift */,
@@ -201,6 +204,7 @@
 				CE5606191A305CDB003B2190 /* LaunchScreen.xib in Resources */,
 				CE5606161A305CDB003B2190 /* Images.xcassets in Resources */,
 				CE56060D1A305CDB003B2190 /* GameScene.sks in Resources */,
+				CE56062F1A305D9E003B2190 /* bird.atlas in Resources */,
 				CE5606141A305CDB003B2190 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +353,7 @@
 				INFOPLIST_FILE = Flappy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -359,6 +364,7 @@
 				INFOPLIST_FILE = Flappy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

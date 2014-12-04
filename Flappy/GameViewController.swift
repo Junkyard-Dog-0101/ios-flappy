@@ -1,9 +1,9 @@
 //
 //  GameViewController.swift
-//  Flappy
+//  FlappyBird
 //
-//  Created by user on 04/12/2014.
-//  Copyright (c) 2014 user. All rights reserved.
+//  Created by Nate Murray on 6/2/14.
+//  Copyright (c) 2014 Fullstack.io. All rights reserved.
 //
 
 import UIKit
@@ -11,17 +11,17 @@ import SpriteKit
 
 extension SKNode {
     class func unarchiveFromFile(file : NSString) -> SKNode? {
-        if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
-            var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil)!
-            var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
-            
-            archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as GameScene
-            archiver.finishDecoding()
-            return scene
-        } else {
-            return nil
-        }
+        
+        let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks")
+        
+        let sceneData = NSData(contentsOfFile: path!, options: .DataReadingMappedIfSafe, error: nil)//.dataWithContentsOfFile(path!, options: .DataReadingMappedIfSafe, error: nil)
+       // let sceneData = NSData.dataWithContentsOfMappedFile(path!)
+        let archiver = NSKeyedUnarchiver(forReadingWithData: sceneData!)
+        
+        archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
+        let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as GameScene
+        archiver.finishDecoding()
+        return scene
     }
 }
 
@@ -62,8 +62,5 @@ class GameViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+    
 }

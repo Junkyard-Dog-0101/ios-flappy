@@ -1,20 +1,20 @@
 //
 //  AppDelegate.swift
-//  Flappy
+//  FlappyBird
 //
-//  Created by user on 04/12/2014.
-//  Copyright (c) 2014 user. All rights reserved.
+//  Created by Nate Murray on 6/2/14.
+//  Copyright (c) 2014 Fullstack.io. All rights reserved.
 //
 
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+                            
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
